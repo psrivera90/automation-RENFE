@@ -1,0 +1,21 @@
+{
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^13.8.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-tags": "^1.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filterSpecs": true,
+      "omitFiltered": true,
+      "e2e": {
+        "stepDefintions": "cypress/support/step_definitions/**/*.{js,ts}"
+      },
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

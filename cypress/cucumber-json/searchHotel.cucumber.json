@@ -1,0 +1,296 @@
+[
+  {
+    "description": "As a user I want to search for hotels by location, dates and number of people to find available acommodation options",
+    "keyword": "Feature",
+    "name": "Hotel search",
+    "line": 1,
+    "id": "hotel-search",
+    "tags": [],
+    "uri": "searchHotel.feature",
+    "elements": [
+      {
+        "id": "hotel-search;successful-search-with-valid-criteria",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "successful search with valid criteria",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "duration": 192000000,
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enter \"Madrid\", entry date and departure date",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "a list of hotels is shown in Home Screen",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hotel-search;successful-search-with-valid-criteria",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "successful search with valid criteria",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enter \"Barcelona\", entry date and departure date",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "a list of hotels is shown in Home Screen",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hotel-search;successful-search-with-valid-criteria",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "successful search with valid criteria",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "user enter \"Valencia\", entry date and departure date",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "a list of hotels is shown in Home Screen",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hotel-search;search-failed-due-to-not-entering-valid-city",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "search failed due to not entering valid city",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user does not enter valid \"Madr!#d\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "an error message \"Lo sentimos, nuiestro sistema no reconoce este nombre\" is displayed",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hotel-search;search-failed-due-to-not-entering-valid-city",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "search failed due to not entering valid city",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user does not enter valid \"' OR '1'='1' --\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "an error message \"Lo sentimos, nuiestro sistema no reconoce este nombre\" is displayed",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "hotel-search;search-failed-due-to-not-entering-valid-city",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "search failed due to not entering valid city",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user visit hotel page",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.melia.com/es\n\nThe response we received from your web server was:\n\n  > 403: Forbidden\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131061:76)\n    at visitFailedByErr (https://www.google.com/__cypress/runner/cypress_runner.js:130475:12)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:131044:13)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1697:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:2392:25)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (https://www.google.com/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (https://www.google.com/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (https://www.google.com/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (https://www.google.com/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (https://www.google.com/__cypress/runner/cypress_runner.js:163183:53)\n    at $Cypress.action (https://www.google.com/__cypress/runner/cypress_runner.js:41042:28)\n    at Runnable.run (https://www.google.com/__cypress/runner/cypress_runner.js:145771:13)\n    at next (https://www.google.com/__cypress/runner/cypress_runner.js:155556:10)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:155600:5)\n    at timeslice (https://www.google.com/__cypress/runner/cypress_runner.js:146111:27)\nFrom Your Spec Code:\n    at homePage.visitPage (cypress/pages/homePage.js:22:11)\n    at Context.eval (cypress/support/step_definitions/searchHotel.js:5:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user does not enter valid \"Мадрид\"",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user click on button search",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "an error message \"Lo sentimos, nuiestro sistema no reconoce este nombre\" is displayed",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

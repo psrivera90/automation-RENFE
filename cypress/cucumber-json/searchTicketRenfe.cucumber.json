@@ -1,0 +1,563 @@
+[
+  {
+    "description": "As a user who needs to travel by train i want to be able to access the Renfe website to search for and select a ticket",
+    "keyword": "Feature",
+    "name": "Search for tickets on RENFE",
+    "line": 1,
+    "id": "search-for-tickets-on-renfe",
+    "tags": [],
+    "uri": "searchTicketRenfe.feature",
+    "elements": [
+      {
+        "id": "search-for-tickets-on-renfe;view-of-available-trains",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "view of available trains",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the user is on the Renfe home page",
+            "result": {
+              "status": "passed",
+              "duration": 1463000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user enters origin, destination, departure date and return date",
+            "result": {
+              "status": "passed",
+              "duration": 2940000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the user click on 'Search ticket' button",
+            "result": {
+              "status": "passed",
+              "duration": 64000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the website should display a list of available trains",
+            "result": {
+              "status": "passed",
+              "duration": 6064000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;selection-of-trains-available",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "selection of trains available",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "the user is on the 'Select your trip' page",
+            "result": {
+              "status": "passed",
+              "duration": 11400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user selects a list of available trains",
+            "result": {
+              "status": "passed",
+              "duration": 636000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the website should show a form to complete de travelers information",
+            "result": {
+              "status": "passed",
+              "duration": 1978000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;empty-fields-in-data-form",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "empty fields in data form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "the user is on the 'Traveler Data' page",
+            "result": {
+              "status": "passed",
+              "duration": 13100000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user does not complete the required fields \"\", \"Rivera\", \"12345678z\" and \"637709563\"",
+            "result": {
+              "status": "passed",
+              "duration": 1173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user click on 'Customize trip' button",
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the fields should be painted red and the error \"El nombre es obligatorio.\" will be marked below",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;empty-fields-in-data-form",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "empty fields in data form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "the user is on the 'Traveler Data' page",
+            "result": {
+              "status": "passed",
+              "duration": 12540000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user does not complete the required fields \"Pablo\", \"\", \"12345678z\" and \"637709563\"",
+            "result": {
+              "status": "passed",
+              "duration": 1150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user click on 'Customize trip' button",
+            "result": {
+              "status": "passed",
+              "duration": 223000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the fields should be painted red and the error \"El primer apellido es obligatorio.\" will be marked below",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;empty-fields-in-data-form",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "empty fields in data form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "the user is on the 'Traveler Data' page",
+            "result": {
+              "status": "passed",
+              "duration": 13829000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user does not complete the required fields \"Pablo\", \"Rivera\", \"\" and \"637709563\"",
+            "result": {
+              "status": "passed",
+              "duration": 1206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user click on 'Customize trip' button",
+            "result": {
+              "status": "passed",
+              "duration": 485000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the fields should be painted red and the error \"El documento es un campo obligatorio\" will be marked below",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;empty-fields-in-data-form",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "empty fields in data form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "the user is on the 'Traveler Data' page",
+            "result": {
+              "status": "passed",
+              "duration": 14251000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user does not complete the required fields \"Pablo\", \"Rivera\", \"12345678z\" and \"\"",
+            "result": {
+              "status": "passed",
+              "duration": 1019000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the user click on 'Customize trip' button",
+            "result": {
+              "status": "passed",
+              "duration": 312000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the fields should be painted red and the error \"El teléfono es un campo obligatorio\" will be marked below",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;data-form-completed-successfully",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "data form completed successfully",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "the user is on the \"Traveler Data\" page",
+            "result": {
+              "status": "passed",
+              "duration": 11587000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "the user completes their personal information",
+            "result": {
+              "status": "passed",
+              "duration": 1240000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the user click on \"Customize trip\" button",
+            "result": {
+              "status": "passed",
+              "duration": 3565000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "the website should show me a page to customize my trip",
+            "result": {
+              "status": "passed",
+              "duration": 20000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;continue-trip-without-personalizing",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "continue trip without personalizing",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "the user is on the \"Customize your trip\" page",
+            "result": {
+              "status": "passed",
+              "duration": 16230000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "the user click the \"Continue with the purchase\" button",
+            "result": {
+              "status": "passed",
+              "duration": 764000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "the website should show a form to select the payment method",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;payment-form-completed-successfully",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "payment form completed successfully",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 46,
+            "name": "the user is on the \"Payment method\" page",
+            "result": {
+              "status": "passed",
+              "duration": 18262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "the user completes the buyers data fields",
+            "result": {
+              "status": "passed",
+              "duration": 880000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "the user selects the payment method",
+            "result": {
+              "status": "passed",
+              "duration": 212000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "the user accepts the website conditions",
+            "result": {
+              "status": "passed",
+              "duration": 137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "the user click on \"Finalize your purchase\" button",
+            "result": {
+              "status": "passed",
+              "duration": 1064000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "the website should redirect me to the payment gateway",
+            "result": {
+              "status": "passed",
+              "duration": 1725000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;empty-fields-in-payment-form",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "empty fields in payment form",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 54,
+            "name": "the user is on the \"Payment method\" page",
+            "result": {
+              "status": "passed",
+              "duration": 16385000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 55,
+            "name": "the user selects the payment method",
+            "result": {
+              "status": "passed",
+              "duration": 267000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "the user accepts the website conditions",
+            "result": {
+              "status": "passed",
+              "duration": 268000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "the user click on \"Finalize your purchase\" button whitout completing the buyers data fields",
+            "result": {
+              "status": "passed",
+              "duration": 998000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "the website should show a pop up with an error message",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-tickets-on-renfe;finalize-purchase-button-disabled",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "finalize purchase button disabled",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 61,
+            "name": "the user is on the \"Payment method\" page",
+            "result": {
+              "status": "passed",
+              "duration": 15665000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 62,
+            "name": "the user completes the buyers data fields but does not select the payment method and does not accept the conditions",
+            "result": {
+              "status": "passed",
+              "duration": 798000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "the \"Finalize your purchase\" button must be disabled",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+    "Title": "Renfe",
+    "Home": "https://www.renfe.com/es/es",
+    "Origin": "A Coru",
+    "Destination": "Santiago De Composte",
+    "Departure_date": "19",
+    "Return_date": "20",
+    "Title_traveler" : "DATOS DEL VIAJERO",
+    "Passenger_name" : "Pablo",
+    "Passenger_first_last_name" : "Rivera",
+    "Passenger_DNI" : "12345678z",
+    "Passenger_phone" : "637709563",
+    "Passenger_email" : "psrivera.1990@gmail.com",
+    "Title_customize" : "Personaliza tu viaje",
+    "Title_pay" : "Método de pago",
+    "Title_purchase" : "Datos de la operación",
+    "Pop_up_error" : "Compruebe que ha rellenado correctamente los Datos del Comprador."
+}
