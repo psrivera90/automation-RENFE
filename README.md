@@ -41,7 +41,7 @@ This project contains an automated test script using Cypress & Cucumber to navig
 
 6. Update Cypress configuration
    
-   Add the following to your 'cypress/plugins/index.js' file:
+   Add the following to your _'cypress/plugins/index.js'_ file:
 
        const cucumber = require('cypress-cucumber-preprocessor').default
    
@@ -49,7 +49,7 @@ This project contains an automated test script using Cypress & Cucumber to navig
          on('file:preprocessor', cucumber())
        }
    
-   Update your 'cypress.json' to include the Cucumber preprocessor configuration:
+   Update your _'cypress.json'_ to include the Cucumber preprocessor configuration:
 
        {
          "testFiles": "**/*.feature"
