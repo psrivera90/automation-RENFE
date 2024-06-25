@@ -8,15 +8,16 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/features/**/*.feature",
 
-    // excludeSpecPattern: "*.js",
-    // env: {
-    //   TAGS: "@focus"
-    // },
+    excludeSpecPattern: "*.js",
+    env: {
+      TAGS: "@focus"
+    },
   
     baseUrl: "https://www.google.com/",
     chromeWebSecurity: false,
     viewportWidth: 1920,
     viewportHeight: 1080,
+    defaultCommandTimeout: 4000
   },
   
 });

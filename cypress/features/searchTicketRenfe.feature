@@ -2,18 +2,24 @@ Feature: Search for tickets on RENFE
 
 As a user who needs to travel by train i want to be able to access the Renfe website to search for and select a ticket
 
-Scenario: view of available trains
+
+Scenario Outline: view of available trains
   Given the user is on the Renfe home page
-  When the user enters origin, destination, departure date and return date
-  And the user click on 'Search ticket' button
-  Then the website should display a list of available trains
+  When the user enters origin "<origin>", destination "<destination>", departure date "<departure_date>" and return date "<return_date>"
+  And the user click on search ticket button
+  Then the website should show a list of available trains according to origin "<origin>" and destination "<destination>" searched
 
+  Examples:
+  | origin | destination          | departure_date | return_date |
+  | A Coru | Santiago De Composte | 28             | 29          |
+  | Madri  | Barcelon             | 28             | 29          |
+  | Valenc | Alicant              | 28             | 29          |
 
+@focus
 Scenario: selection of trains available
-  Given the user is on the 'Select your trip' page
+  Given the user is on the select your trip page
   When the user selects a list of available trains
   Then the website should show a form to complete de travelers information
-
 
 Scenario Outline: empty fields in data form
   Given the user is on the 'Traveler Data' page

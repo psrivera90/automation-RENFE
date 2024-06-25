@@ -1,3 +1,4 @@
+const commonFunctions = require("../functions/commonFunctions")
 const homeRenfe = require("./homeRenfe")
 
 class selectTrainPage {
@@ -16,23 +17,23 @@ class selectTrainPage {
     tripPage () {
         cy.clearCookies()
         cy.visitRenfe()
-        homeRenfe.selectTravel()
+        homeRenfe.selectTravelHarcoding()
         homeRenfe.searchTicketButton()
-        homeRenfe.confirmationTravel()
+        homeRenfe.confirmationTravelHarcoding()
     }
     
     selectTrain () {
         cy.get(this.selectors.selectFirstTrain).should('be.visible').click({force:true})
         cy.get(this.selectors.selectOptionFirstTrain).should('not.be.visible').click({force:true})
-        homeRenfe.clickOn(this.selectors.selectionButton)
+        commonFunctions.clickOn(this.selectors.selectionButton)
         cy.get(this.selectors.selectSecondTrain).should('be.visible').click({force:true})
         cy.get(this.selectors.selectOptionSecondTrain).should('not.be.visible').click({force:true})
-        homeRenfe.clickOn(this.selectors.selectionButton)
+        commonFunctions.clickOn(this.selectors.selectionButton)
     }
 
     confirmationTrain () {
         cy.fixture('dataRenfe').then((data) => {
-            cy.get(this.selectors.confirmationTrain).should('be.visible').contains(data.Title_traveler)
+            cy.get(this.selectors.confirmationTrain).should('be.visible').and('contain.text', data.Title_traveler)
         })
     }
 }

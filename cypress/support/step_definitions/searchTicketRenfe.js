@@ -10,20 +10,20 @@ Given('the user is on the Renfe home page', () => {
     cy.visitRenfe()
 })
 
-When('the user enters origin, destination, departure date and return date', () => {
-    homeRenfe.selectTravel()
+When('the user enters origin {string}, destination {string}, departure date {string} and return date {string}', (origin, destination, departureDate, returnDate) => {
+    homeRenfe.selectTravelExamples(origin, destination, departureDate, returnDate)
 })
 
-And("the user click on 'Search ticket' button", () => {
+And('the user click on search ticket button', () => {
     homeRenfe.searchTicketButton()
 })
 
-Then('the website should display a list of available trains', () => {
-    homeRenfe.confirmationTravel()
+Then('the website should show a list of available trains according to origin {string} and destination {string} searched', (origin, destination) => {
+    homeRenfe.confirmationTravelExamples(origin, destination)
 })
 
 //Selection of trains available
-Given("the user is on the 'Select your trip' page", () => {
+Given('the user is on the select your trip page', () => {
     selectTrainPage.tripPage()
 })
 
