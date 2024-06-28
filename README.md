@@ -104,11 +104,13 @@ The custom comands are defined in the _'cypress/support/commands.js'_ file. Thes
 Contributions are welcome! Please follow these steps to contribuite:
 
   1. Fork the repository
+     
   2. Create a new branch
      
          git checkout -b feature/your-feature
 
   3. Make your changes
+     
   4. Commit your changes
 
          git commit -m 'Add some feature'
