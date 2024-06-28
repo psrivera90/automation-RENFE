@@ -14,18 +14,20 @@ This project contains an automated test script using Cypress & Cucumber to navig
   - [Feature file](#feature-file)
   - [Step definitions](#step-definitions)
 - [Fixtures](#fixtures)
+- [Common functions](#common-functions)
 - [Page objects](#page-objects)
+- [Commands](#commands)
 - [Contributions](#contributions)
 
 ## Installation
 
 1. Clone this repository to your local machine
    
-       git clone https://github.com/psrivera90/automationRENFE/
+       git clone https://github.com/psrivera90/automation-RENFE/
 
 2. Navigate to the project folder
    
-       cd automationRENFE
+       cd automation-RENFE
 
 3. Install the dependencies
    
@@ -85,9 +87,17 @@ The step definitions file _'searchTicketRenfe.js'_ is located in _'cypress/suppo
 
 The fixture file _'dataRenfe.json'_ located in _'cypress/fixtures'_ contains certain data used in the tests.
 
+## Common functions
+
+The _'commonFunctions.js'_ file is located in _'cypress/functions'_ and contains reusable functions for testing.
+
 ## Page objects
 
 The Page Objects files are located in _'cypress/pages'_ and contain classes representing different pages of the application. These files encapsulate the page elements and related actions for better organization and maintainability.
+
+## Commands
+
+The custom comands are defined in the _'cypress/support/commands.js'_ file. These commands extend Cypress with reusable actions and can be used to simplify and standardize test scripts.
 
 ## Contributions
 
