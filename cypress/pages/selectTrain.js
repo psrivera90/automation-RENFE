@@ -1,5 +1,5 @@
 const commonFunctions = require("../functions/commonFunctions")
-const homeRenfe = require("./homeRenfe")
+const homeRenfePage = require("./homeRenfe")
 
 class selectTrainPage {
 
@@ -17,12 +17,13 @@ class selectTrainPage {
     tripPage () {
         cy.clearCookies()
         cy.visitRenfe()
-        homeRenfe.selectTravelHarcoding()
-        homeRenfe.searchTicketButton()
-        homeRenfe.confirmationTravelHarcoding()
+        homeRenfePage.selectTravelHarcoding()
+        homeRenfePage.searchTicketButton()
+        homeRenfePage.confirmationTravelHarcoding()
     }
     
     selectTrain () {
+        cy.wait(5000)
         cy.get(this.selectors.selectFirstTrain).should('be.visible').click({force:true})
         cy.get(this.selectors.selectOptionFirstTrain).should('not.be.visible').click({force:true})
         commonFunctions.clickOn(this.selectors.selectionButton)

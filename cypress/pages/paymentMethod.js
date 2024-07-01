@@ -1,5 +1,5 @@
+import commonFunctions from "../functions/commonFunctions"
 import customizeTripPage from "./customizeTrip"
-import homeRenfe from "./homeRenfe"
 
 class paymentMethodPage {
 
@@ -17,7 +17,7 @@ class paymentMethodPage {
 
     paymentMethod () {
         customizeTripPage.customizeTrip()
-        homeRenfe.clickOn(customizeTripPage.selectors.continuePurchasingButton)
+        commonFunctions.clickOn(customizeTripPage.selectors.continuePurchasingButton)
         customizeTripPage.confirmationPay()
     }
 
@@ -29,7 +29,7 @@ class paymentMethodPage {
     }
 
     userCheckCard () {
-        cy.get(this.selectors.checkCard).check()
+        cy.get(this.selectors.checkCard).click()
     }
 
     userCheckConditions () {
@@ -37,7 +37,7 @@ class paymentMethodPage {
     }
 
     finalizePurchase () {
-        homeRenfe.clickOn(this.selectors.payButton)
+        commonFunctions.clickOn(this.selectors.payButton)
     }
 
     confirmationPurchase () {
@@ -46,12 +46,25 @@ class paymentMethodPage {
         })
     }
 
+    emptyRequireFields () {
+        cy.get(this.selectors.inputEmail).invoke('val').should('be.empty')
+        cy.get(this.selectors.inputPhone).invoke('val').should('be.empty')
+    }
+
     errorEmptyFields() {
         cy.on('window:error', (error) => {
             cy.fixture('dataRenfe').then((data) => {
                 expect(error.message).to.include(data.Pop_up_error)
             })
         })
+    }
+
+    uncheckedCard () {
+        cy.get(this.selectors.checkCard).should('exist')
+    }
+
+    uncheckedConditions () {
+        cy.get(this.selectors.checkConditions).should('not.be.checked')
     }
 
     payButtonDisabled () {

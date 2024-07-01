@@ -1,5 +1,5 @@
 const commonFunctions = require("../functions/commonFunctions")
-class homeRenfe {
+class homeRenfePage {
 
     constructor() {
         this.selectors = {
@@ -82,4 +82,4 @@ class homeRenfe {
     }
 }
 
-module.exports = new homeRenfe();
+module.exports = new homeRenfePage();

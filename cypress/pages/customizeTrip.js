@@ -1,5 +1,5 @@
+import commonFunctions from "../functions/commonFunctions"
 import dataFormPage from "./dataForm"
-import homeRenfe from "./homeRenfe"
 
 class customizeTripPage {
 
@@ -13,7 +13,7 @@ class customizeTripPage {
     customizeTrip () {
         dataFormPage.travelerData()
         dataFormPage.insertCredentials()
-        homeRenfe.clickOn(dataFormPage.selectors.customizeButton)
+        commonFunctions.clickOn(dataFormPage.selectors.customizeButton)
         dataFormPage.confirmationForm()
     }
 
@@ -24,7 +24,7 @@ class customizeTripPage {
     }
 
     purchasingButton () {
-        homeRenfe.clickOn(this.selectors.continuePurchasingButton)
+        commonFunctions.clickOn(this.selectors.continuePurchasingButton)
     }
 }
 

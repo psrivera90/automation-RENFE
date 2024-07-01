@@ -36,32 +36,41 @@ Then('the website should show a form to complete de travelers information', () =
 })    
 
 //Empty fields in data form
-Given("the user is on the 'Traveler Data' page", () => {
+Given('the user is on the traveler data page', () => {
     dataFormPage.travelerData()
 })
 
-When('the user does not complete the required fields {string}, {string}, {string} and {string}', (name, firstLastname, DNI, phone) => {
-    dataFormPage.insertEmptyCredentials(name, firstLastname, DNI, phone)
+When('the user does not complete the required fields name {string}, first lastname {string}, DNI {string} and phone {string}', (name, firstLastname, DNI, phone) => {
+    const credentials = {
+        name: name,
+        firstLastname: firstLastname,
+        DNI: DNI,
+        phone: phone
+    };
+    cy.wrap(credentials).as('credentials');
+    dataFormPage.insertEmptyCredentials(credentials);
 })
 
-And("the user click on 'Customize trip' button", () => {
+And('the user click on customize trip button', () => {
     dataFormPage.customizeTripButton()
 })
 
 Then('the fields should be painted red and the error {string} will be marked below', (error) => {
-    dataFormPage.emptyFieldsError(error)
+    cy.get('@credentials').then(credentials => {
+        dataFormPage.emptyFieldsError(credentials, error);
+    });
 })
 
 //Data form completed successfully
-Given('the user is on the "Traveler Data" page', () => {
+Given('the user is on the traveler data page', () => {
     dataFormPage.travelerData()
 })
 
-When('the user completes their personal information', () => {
+When('the user does complete the required fields name, first lastname, DNI and phone', () => {
     dataFormPage.insertCredentials()
 })
 
-And('the user click on "Customize trip" button', () => {
+And('the user click on customize trip button', () => {
     dataFormPage.customizeTripButton()
 })
 
@@ -70,11 +79,11 @@ Then('the website should show me a page to customize my trip', () => {
 })
 
 //Continue trip whitout personalizing
-Given('the user is on the "Customize your trip" page', () => {
+Given('the user is on the customize your trip page', () => {
     customizeTripPage.customizeTrip()
 })
 
-When('the user click the "Continue with the purchase" button', () => {
+When('the user click the continue with the purchase button', () => {
     customizeTripPage.purchasingButton()
 })
 
@@ -82,16 +91,16 @@ Then('the website should show a form to select the payment method', () => {
     customizeTripPage.confirmationPay()
 })
 
-//Payment form completed successfully
-Given('the user is on the "Payment method" page', () => {
+//Payment form completed successfully with credit card
+Given('the user is on the payment method page', () => {
     paymentMethodPage.paymentMethod()
 })
 
-When('the user completes the buyers data fields', () => {
+When('the user does complete the required fields email and phone', () => {
     paymentMethodPage.insertBuyerData()
 })
 
-And('the user selects the payment method', () => {
+And('the user selects the card payment method', () => {
     paymentMethodPage.userCheckCard()
 })
 
@@ -99,7 +108,7 @@ And('the user accepts the website conditions', () => {
     paymentMethodPage.userCheckConditions()
 })
 
-And('the user click on "Finalize your purchase" button', () => {
+And('the user click on finalize your purchase button', () => {
     paymentMethodPage.finalizePurchase()
 })
 
@@ -108,11 +117,15 @@ Then('the website should redirect me to the payment gateway', () => {
 })
 
 //Empty fields in payment form
-Given('the user is on the "Payment method" page', () => {
+Given('the user is on the payment method page', () => {
     paymentMethodPage.paymentMethod()
 })
 
-When('the user selects the payment method', () => {
+When('the user does not complete the required fields email and phone', () => {
+    paymentMethodPage.emptyRequireFields()
+})
+
+And('the user selects the card payment method', () => {
     paymentMethodPage.userCheckCard()
 })
 
@@ -120,7 +133,7 @@ And('the user accepts the website conditions', () => {
     paymentMethodPage.userCheckConditions()
 })
 
-And('the user click on "Finalize your purchase" button whitout completing the buyers data fields', () => {
+And('the user click on finalize your purchase button', () => {
     paymentMethodPage.finalizePurchase()
 })
 
@@ -128,15 +141,28 @@ Then('the website should show a pop up with an error message', () => {
     paymentMethodPage.errorEmptyFields()
 })
 
+
+
+
+
+
 //Finalize purchase button disabled
-Given('the user is on the "Payment method" page', () => {
+Given('the user is on the payment method page', () => {
     paymentMethodPage.paymentMethod()
 })
 
-When('the user completes the buyers data fields but does not select the payment method and does not accept the conditions', () => {
-    paymentMethodPage.insertBuyerData()
+When('the user does not complete the required fields email and phone', () => {
+    paymentMethodPage.emptyRequireFields()
 })
 
-Then('the "Finalize your purchase" button must be disabled', () => {
+And('the user does not select a payment method', () => {
+    paymentMethodPage.uncheckedCard()
+})
+
+And('the user does not accept the website conditions', () => {
+    paymentMethodPage.uncheckedConditions()
+})
+
+Then('the finalize your purchase button must be disabled', () => {
     paymentMethodPage.payButtonDisabled()
 })
